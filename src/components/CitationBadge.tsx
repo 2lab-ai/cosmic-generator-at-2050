@@ -25,13 +25,3 @@ export function CiteBadge({ citationKey }: { citationKey: string }) {
     </span>
   );
 }
-
-export function CiteLine({ citationKeys }: { citationKeys: string[] }) {
-  return (
-    <span className="text-muted text-sm">
-      {citationKeys.map((k) => (
-        <CiteBadge key={k} citationKey={k} />
-      ))}
-    </span>
-  );
-}

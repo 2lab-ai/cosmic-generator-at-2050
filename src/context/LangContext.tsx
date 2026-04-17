@@ -19,16 +19,27 @@ const STORAGE_KEY = 'cosmic-generator-lang';
 
 export function LangProvider({ children }: { children: ReactNode }) {
   // Default to 'ko' — author's primary language.
+  // The page is pre-rendered in KO (matches SSR <html lang="ko">). On mount,
+  // we read localStorage and sync <html lang> + state. If a user previously
+  // saved 'en' the page flashes KO once — acceptable for a static landing.
   const [lang, setLangState] = useState<Lang>('ko');
 
   useEffect(() => {
     try {
       const saved = window.localStorage.getItem(STORAGE_KEY);
-      if (saved === 'ko' || saved === 'en') setLangState(saved);
+      if (saved === 'ko' || saved === 'en') {
+        setLangState(saved);
+      }
     } catch {
       // localStorage not available; keep default.
     }
   }, []);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);

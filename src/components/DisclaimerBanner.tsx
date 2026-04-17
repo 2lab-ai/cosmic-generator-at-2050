@@ -7,15 +7,21 @@ const STORAGE_KEY = 'cosmic-generator-disclaimer-dismissed';
 
 export function DisclaimerBanner() {
   const { content } = useLang();
-  const [open, setOpen] = useState(true);
+  // Start closed. On mount, open unless user previously dismissed.
+  // This avoids the reverse flash of showing the banner and then hiding it
+  // for returning visitors — visible only after hydration.
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    let dismissed = false;
     try {
-      const v = window.localStorage.getItem(STORAGE_KEY);
-      if (v === '1') setOpen(false);
+      dismissed = window.localStorage.getItem(STORAGE_KEY) === '1';
     } catch {
       // ignore
     }
+    if (!dismissed) setOpen(true);
+    setMounted(true);
   }, []);
 
   const dismiss = () => {
@@ -27,7 +33,7 @@ export function DisclaimerBanner() {
     }
   };
 
-  if (!open) return null;
+  if (!mounted || !open) return null;
 
   return (
     <div

@@ -54,7 +54,13 @@ export const citations: CitationEntry[] = [
   { key: 'L5.S1.2', paper_key: 'L5', section_or_table: '§1.2 Field Equation', anchor: '□_λ Φ + m²Φ = J', label: 'source' },
   { key: 'L5.S2.1', paper_key: 'L5', section_or_table: '§2.1 Symmetry Breaking', anchor: 'λ_c critical scales for each hierarchy level', label: 'source' },
   { key: 'L5.S3.3', paper_key: 'L5', section_or_table: '§3.3 Compression Ratio', anchor: 'r_n = e (natural hierarchies)', label: 'source' },
+  { key: 'L5.S4.3', paper_key: 'L5', section_or_table: '§4.3 Universality Classes', anchor: 'critical exponent ν ≈ 0.73 ↔ scaling β', label: 'source' },
   { key: 'L5.S12', paper_key: 'L5', section_or_table: '§12 (extrapolation)', anchor: 'HA field extreme regime', label: 'extrapolation' },
+
+  // L4 long-term / orbital / Kardashev (referenced from timeline footnotes)
+  { key: 'L4.S7.2', paper_key: 'L4', section_or_table: '§7.2 Medium-term energy', anchor: 'HAL3-HAL5 dedicated solar + nuclear', label: 'source' },
+  { key: 'L4.S8.1', paper_key: 'L4', section_or_table: '§8.1 Orbital solar', anchor: 'HAL7+ orbital power harvesting', label: 'source' },
+  { key: 'L4.S8.2', paper_key: 'L4', section_or_table: '§8.2 Fusion requirements', anchor: 'commercial fusion ~2038 for HAL5+', label: 'extrapolation' },
 
   // Roadmap / 2hal9 prior art
   { key: 'ROADMAP.P1', paper_key: 'ROADMAP', section_or_table: 'Phase I', anchor: 'L1/L3A/L3B/L4 prototypes 0-6mo', label: 'source' },
