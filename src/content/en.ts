@@ -13,6 +13,7 @@ function ts(year: number, title: string) {
     title,
     headline: shortPlaceholder,
     body: comingSoon,
+    prereq_lead: shortPlaceholder,
     metric: {
       value: shortPlaceholder,
       label: shortPlaceholder,
@@ -48,6 +49,7 @@ export const en: ContentDict = {
     timeline: 'Timeline',
     charts: 'Charts',
     sources: 'Sources',
+    prereq: 'Prereq',
   },
   hero: {
     badge: 'SPECULATIVE · SOURCED · 2026',
@@ -65,6 +67,35 @@ export const en: ContentDict = {
   ha_primer: {
     title: 'HA — a three-minute definition',
     lede: comingSoon,
+    l_ladder: {
+      title: 'HA Ladder — L0 to L9',
+      intro: comingSoon,
+      rows: [
+        { level: 'L0', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L1', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L2', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L3', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L4', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L5', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L6', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L7', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L8', token: '(EN TBD)', example: 'Coming soon.' },
+        { level: 'L9', token: '(EN TBD)', example: 'Coming soon.' },
+      ],
+    },
+    principles: {
+      title: 'Why HA is not a metaphor — four principles',
+      items: [
+        { heading: 'P1. Differentiation ⇄ Integration', body: comingSoon },
+        { heading: 'P2. Energy savings — O(n²) → O(log n)', body: comingSoon },
+        { heading: 'P3. Complexity threshold', body: comingSoon },
+        { heading: 'P4. Universality', body: comingSoon },
+      ],
+    },
+    hal_vs_l: {
+      title: 'HAL number vs natural L number — different measurement axes',
+      body: comingSoon,
+    },
     examples_title: comingSoon,
     examples: [
       {
@@ -99,6 +130,52 @@ export const en: ContentDict = {
       },
     ],
     closing: comingSoon,
+  },
+  prereq: {
+    title: 'Prereq — six check-ins before the timeline',
+    intro: comingSoon,
+    cards: [
+      {
+        id: 'hal-tag',
+        number: '1',
+        title: 'HAL Number Plate',
+        body: comingSoon,
+      },
+      {
+        id: 'energy-intel',
+        number: '2',
+        title: 'I = α · E^0.73 — energy-intelligence scaling',
+        body: comingSoon,
+        citation_key: 'L4.S1.1',
+      },
+      {
+        id: 'branching',
+        number: '3',
+        title: '7±2 branching — b* ≈ 7.39',
+        body: comingSoon,
+        citation_key: 'L3B.Thm2',
+      },
+      {
+        id: 'iso',
+        number: '4',
+        title: 'Agent-Neural Isomorphism',
+        body: comingSoon,
+        citation_key: 'L3A.Thm1',
+      },
+      {
+        id: 'levers',
+        number: '5',
+        title: 'Two levers — self-replicating fabs + self-improvement loop',
+        body: comingSoon,
+      },
+      {
+        id: 'kardashev',
+        number: '6',
+        title: 'Kardashev Type I / II / III',
+        body: comingSoon,
+        citation_key: 'L4.S9',
+      },
+    ],
   },
   pattern: {
     title: 'The Pattern — human HA timeline',
@@ -152,6 +229,32 @@ export const en: ContentDict = {
     ts(2045, '2045 — 4B clusters · HAL7 planet-scale'),
     ts(2050, '2050 — 1T clusters · HAL8 solar system'),
     ts(2056, '2056 — 500T clusters · HAL9 Cosmic Generator'),
+  ],
+  bridges: [
+    {
+      id: 'fusion-bootstrap',
+      anchor_year_from: 2034,
+      anchor_year_to: 2038,
+      title: 'Bridge · 2034→2038 — AI bootstrapping fusion',
+      body: comingSoon,
+      citation_keys: ['L4.S7.3', 'L4.S8.2'],
+    },
+    {
+      id: 'dyson-partial',
+      anchor_year_from: 2045,
+      anchor_year_to: 2050,
+      title: 'Bridge · 2045→2050 — leaving the planet',
+      body: comingSoon,
+      citation_keys: ['L4.S5.1', 'L4.S7.2', 'bottleneck.2045', 'bottleneck.2050'],
+    },
+    {
+      id: 'self-sourcing',
+      anchor_year_from: 2050,
+      anchor_year_to: 2056,
+      title: 'Bridge · 2050→2056 — self-sourcing regime',
+      body: comingSoon,
+      citation_keys: ['L5.S1.2', 'L5.S12', 'L4.S9'],
+    },
   ],
   charts_section: {
     title: 'Charts',

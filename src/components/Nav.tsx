@@ -7,6 +7,7 @@ export function Nav() {
   const { content } = useLang();
   const items = [
     { id: 'intro', label: content.nav.intro },
+    { id: 'prereq', label: content.nav.prereq },
     { id: 'pattern', label: content.nav.pattern },
     { id: 'prior-art', label: content.nav.prior_art },
     { id: 'milestones', label: content.nav.milestones },

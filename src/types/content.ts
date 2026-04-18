@@ -3,6 +3,7 @@ export type TimelineBlockContent = {
   title: string;
   headline: string;
   body: string;
+  prereq_lead: string;
   metric: {
     value: string;
     label: string;
@@ -13,6 +14,29 @@ export type TimelineBlockContent = {
     body: string;
   };
   footnotes: string[];
+};
+
+export type PrereqCard = {
+  id:
+    | 'hal-tag'
+    | 'energy-intel'
+    | 'branching'
+    | 'iso'
+    | 'levers'
+    | 'kardashev';
+  number: string;
+  title: string;
+  body: string;
+  citation_key?: string;
+};
+
+export type Bridge = {
+  id: 'fusion-bootstrap' | 'dyson-partial' | 'self-sourcing';
+  anchor_year_from: number;
+  anchor_year_to: number;
+  title: string;
+  body: string;
+  citation_keys: string[];
 };
 
 export type ContentDict = {
@@ -37,6 +61,7 @@ export type ContentDict = {
     timeline: string;
     charts: string;
     sources: string;
+    prereq: string;
   };
   hero: {
     badge: string;
@@ -54,10 +79,28 @@ export type ContentDict = {
   ha_primer: {
     title: string;
     lede: string;
+    l_ladder: {
+      title: string;
+      intro: string;
+      rows: { level: string; token: string; example: string }[];
+    };
+    principles: {
+      title: string;
+      items: { heading: string; body: string }[];
+    };
+    hal_vs_l: {
+      title: string;
+      body: string;
+    };
     examples_title: string;
     // Each example renders as a titled code-block column (5 levels, L1 → L5).
     examples: { title: string; levels: string[] }[];
     closing: string;
+  };
+  prereq: {
+    title: string;
+    intro: string;
+    cards: PrereqCard[];
   };
   pattern: {
     title: string;
@@ -99,6 +142,7 @@ export type ContentDict = {
     intro: string;
   };
   timeline_blocks: TimelineBlockContent[];
+  bridges: Bridge[];
   charts_section: {
     title: string;
     intro: string;
