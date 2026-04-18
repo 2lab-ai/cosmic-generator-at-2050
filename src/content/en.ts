@@ -119,7 +119,10 @@ export const en: ContentDict = {
     readme_quote: comingSoon,
     files_title: 'Key file permalinks',
     stopped_at_title: 'Where it stopped',
-    stopped_at_body: comingSoon,
+    // Minimal factual footnote (2026-04-18): a second prior-art anchor landed.
+    // Full English prose is still comingSoon; this sentence exists so EN readers
+    // do not miss the L1-axis scaffold while the rest of the section is translated.
+    stopped_at_body: 'As of 2026-04-18, a second prior-art anchor has landed: a Python MVP scaffold of the L1 paper\'s §2.4 sleep-wake algorithm (`labforadvancedstudy/hal-sleep-wake`, PR #2 merged) — ResNet-18 + LoRA on Conv2d/fc running a CIFAR-10 → CIFAR-100 continual sequence with wake + NREM consolidation (`W ← W + s·(α/r)·B@A`, adapter re-init). REM synthetic-dream and GPU measurement numbers are follow-up PRs. Where 2hal9 anchors the L3~L4 self-organization axis, hal-sleep-wake anchors the L1 algorithm axis. Full narrative: coming soon.',
     screenshot_placeholder: 'TODO: 2hal9 demo screenshot',
   },
   milestones: {
