@@ -9,7 +9,6 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'L1_Hierarchical_Abstraction_All_You_Need_v2.md',
     permalink: PERMALINK_BASE + 'L1_Hierarchical_Abstraction_All_You_Need_v2.md',
-    zenodo_doi: '10.5281/zenodo.hal9000',
   },
   {
     key: 'L3A',
@@ -17,7 +16,6 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'L3_A_Backpropagation_Multi_Level_AI_v2.md',
     permalink: PERMALINK_BASE + 'L3_A_Backpropagation_Multi_Level_AI_v2.md',
-    zenodo_doi: '10.5281/zenodo.hal9001',
   },
   {
     key: 'L3B',
@@ -25,7 +23,6 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'L3_B_Cognitive_Load_Distribution_v2.md',
     permalink: PERMALINK_BASE + 'L3_B_Cognitive_Load_Distribution_v2.md',
-    zenodo_doi: '10.5281/zenodo.hal9002',
   },
   {
     key: 'L4',
@@ -33,7 +30,6 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'L4_Road_to_HAL9_v2.md',
     permalink: PERMALINK_BASE + 'L4_Road_to_HAL9_v2.md',
-    zenodo_doi: '10.5281/zenodo.hal9004',
   },
   {
     key: 'L5',
@@ -41,7 +37,6 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'L5_Hierarchical_Abstraction_Is_Emergence_v2.md',
     permalink: PERMALINK_BASE + 'L5_Hierarchical_Abstraction_Is_Emergence_v2.md',
-    zenodo_doi: '10.5281/zenodo.hal9005',
   },
   {
     key: 'ROADMAP',
@@ -49,6 +44,5 @@ export const sources: SourceEntry[] = [
     authors: 'Jihyuk Im, Claude Opus 4',
     file: 'HAL_Implementation_Roadmap_2025_2028.md',
     permalink: PERMALINK_BASE + 'HAL_Implementation_Roadmap_2025_2028.md',
-    zenodo_doi: 'internal',
   },
 ];

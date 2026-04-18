@@ -52,7 +52,6 @@ export type SourceEntry = {
   authors: string;
   file: string;
   permalink: string;
-  zenodo_doi: string;
 };
 
 export type CitationEntry = {

@@ -62,6 +62,44 @@ export const en: ContentDict = {
     body: comingSoon,
     core_claim: 'What took humanity 200,000 years of HA compresses into 30 years for AI.',
   },
+  ha_primer: {
+    title: 'HA — a three-minute definition',
+    lede: comingSoon,
+    examples_title: comingSoon,
+    examples: [
+      {
+        title: 'A cup of coffee',
+        levels: [
+          'L1 · hot brown liquid',
+          'L2 · a beverage called coffee',
+          'L3 · caffeine → cognitive activation',
+          'L4 · productivity tool',
+          'L5 · symbol of modern labor culture',
+        ],
+      },
+      {
+        title: 'A single bug',
+        levels: [
+          'L1 · code does not run',
+          'L2 · this function throws an error',
+          'L3 · logic / design mistake',
+          'L4 · architectural flaw',
+          'L5 · "is a perfect system even possible?"',
+        ],
+      },
+      {
+        title: 'An AI system',
+        levels: [
+          'L1 · token probability prediction',
+          'L2 · code generation',
+          'L3 · business-logic agent',
+          'L4 · organization-scale automation',
+          'L5 · platform for societal decision-making',
+        ],
+      },
+    ],
+    closing: comingSoon,
+  },
   pattern: {
     title: 'The Pattern — human HA timeline',
     intro: comingSoon,
@@ -75,9 +113,9 @@ export const en: ContentDict = {
     },
   },
   prior_art: {
-    title: 'Prior Art — HAL0 evidence (2hal9)',
+    title: 'Prior Art — partial HAL0 prototype (2hal9)',
     intro: comingSoon,
-    readme_quote_title: '2hal9 README excerpt',
+    readme_quote_title: '2hal9 README excerpt (author\'s own wording)',
     readme_quote: comingSoon,
     files_title: 'Key file permalinks',
     stopped_at_title: 'Where it stopped',
