@@ -1,13 +1,16 @@
 'use client';
 
+import type React from 'react';
 import { useLang } from '@/context/LangContext';
 import { Hero } from '@/components/Hero';
 import { Intro } from '@/components/Intro';
 import { HAPrimer } from '@/components/HAPrimer';
+import { Prereq } from '@/components/Prereq';
 import { Pattern } from '@/components/Pattern';
 import { PriorArt } from '@/components/PriorArt';
 import { ClusterMilestones } from '@/components/ClusterMilestones';
 import { TimelineBlock } from '@/components/TimelineBlock';
+import { Bridge } from '@/components/Bridge';
 import { Sources } from '@/components/Sources';
 import { Footer } from '@/components/Footer';
 import { HACompressionChart } from '@/components/Charts/HACompressionChart';
@@ -23,11 +26,12 @@ export default function Home() {
       <Hero />
       <Intro />
       <HAPrimer />
+      <Prereq />
       <Pattern />
       <PriorArt />
       <ClusterMilestones />
 
-      {/* §5 Timeline — 9 blocks */}
+      {/* §5 Timeline — 9 blocks with 3 bridges interleaved */}
       <section id="timeline" aria-labelledby="timeline-title">
         <div className="wide-col">
           <div className="text-mono text-xs uppercase tracking-wider text-[var(--fg-dim)] mb-3">
@@ -37,9 +41,24 @@ export default function Home() {
           <p className="mt-4 max-w-[720px]">{content.timeline_section.intro}</p>
         </div>
         <div className="mt-10 space-y-12">
-          {content.timeline_blocks.map((b, i) => (
-            <TimelineBlock key={b.year + '-' + i} block={b} index={i} />
-          ))}
+          {content.timeline_blocks
+            .map((b, i) => {
+              const nodes: React.ReactNode[] = [];
+              nodes.push(
+                <TimelineBlock key={b.year + '-' + i} block={b} index={i} />
+              );
+              // 2034 = index 3, 2045 = index 6, 2050 = index 7
+              if (i === 3)
+                nodes.push(
+                  <Bridge key="bridge-fusion" id="fusion-bootstrap" />
+                );
+              if (i === 6)
+                nodes.push(<Bridge key="bridge-dyson" id="dyson-partial" />);
+              if (i === 7)
+                nodes.push(<Bridge key="bridge-self" id="self-sourcing" />);
+              return nodes;
+            })
+            .flat()}
         </div>
       </section>
 

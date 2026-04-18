@@ -36,6 +36,12 @@ export function TimelineBlock({ block, index }: Props) {
           {block.headline}
         </p>
 
+        {block.prereq_lead && (
+          <div className="prereq-lead text-mono text-xs text-[var(--fg-muted)] border-l-2 border-[var(--border)] pl-3 py-1 mb-4 mt-4">
+            {block.prereq_lead}
+          </div>
+        )}
+
         <div className="metric">
           <div className="flex items-baseline justify-between gap-3 flex-wrap">
             <div className="metric-value">{block.metric.value}</div>
