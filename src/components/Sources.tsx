@@ -36,9 +36,6 @@ export function Sources() {
                 <a href={s.permalink} target="_blank" rel="noopener noreferrer">
                   {s.file}
                 </a>
-                <span className="text-[var(--fg-dim)]">
-                  DOI: {s.zenodo_doi}
-                </span>
               </div>
             </li>
           ))}

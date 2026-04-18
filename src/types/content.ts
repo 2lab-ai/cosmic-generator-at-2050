@@ -51,6 +51,14 @@ export type ContentDict = {
     body: string;
     core_claim: string;
   };
+  ha_primer: {
+    title: string;
+    lede: string;
+    examples_title: string;
+    // Each example renders as a titled code-block column (5 levels, L1 → L5).
+    examples: { title: string; levels: string[] }[];
+    closing: string;
+  };
   pattern: {
     title: string;
     intro: string;

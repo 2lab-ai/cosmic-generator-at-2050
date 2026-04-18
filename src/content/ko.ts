@@ -42,6 +42,44 @@ export const ko: ContentDict = {
 이 문서는 그 "얼마나 빠르게"를 HAL0(2026, 단일 클러스터 1.4 kW)에서 시작해 HAL9(2056, 1.2 EW)까지의 14개 마일스톤으로 끊어 보여준다. 각 블록은 논문 테이블에서 그대로 인용한 수치와, 그 수치 사이를 메우는 외삽을 라벨로 구분한다. 본문은 한국어가 1차 소스이고, 영문은 "Coming soon" placeholder만 있다 — 원본 논문을 쓴 사람의 모국어가 한국어이고, 번역을 거치며 나노 단위 뉘앙스를 잃을 바엔 원문을 그대로 두는 편이 낫다는 판단이다.`,
     core_claim: '인류 20만 년에 걸쳐 일어난 HA 과정이, AI에서는 30년으로 압축된다.',
   },
+  ha_primer: {
+    title: 'HA란 무엇인가 — 3분 정의',
+    lede: `Hierarchical Abstraction(HA)은 "작은 것들이 모여 큰 것을 만들고, 큰 것이 또 모여 더 큰 것을 만드는" 계층 구조 자체를 말한다. 강의 지류, 신경망, 기업 조직도, 소스 코드의 함수-모듈-시스템 — 서로 다른 영역의 이 패턴들이 동일한 수학 구조로 묶인다는 주장이 HA의 출발점이다. 중요한 건 "계층이 있다"는 관찰이 아니라 "각 계단을 오르는 데 정보 압축과 에너지 소모가 정량화된다"는 것이다. L5 §2.1은 이 계단을 스케일 필드 Φ의 자발 대칭 깨짐으로 정식화하고, L4 §1.1은 그 계단당 에너지 비용을 I = α·E^0.73으로 경험식화한다. HA는 은유가 아니라 물리적·정보이론적 제약이라는 뜻이다.`,
+    examples_title: '일상 속 HA 예시 — 같은 사물을 레벨별로 읽기',
+    examples: [
+      {
+        title: '커피 한 잔',
+        levels: [
+          'L1 · 뜨거운 갈색 액체',
+          'L2 · 커피라는 음료',
+          'L3 · 카페인으로 각성 효과',
+          'L4 · 생산성 도구',
+          'L5 · 현대 노동 문화의 상징',
+        ],
+      },
+      {
+        title: '버그 하나',
+        levels: [
+          'L1 · 코드가 안 돌아감',
+          'L2 · 이 함수에서 에러 발생',
+          'L3 · 로직 설계 문제',
+          'L4 · 아키텍처 결함',
+          'L5 · "완벽한 시스템은 가능한가"라는 철학적 질문',
+        ],
+      },
+      {
+        title: 'AI 시스템',
+        levels: [
+          'L1 · 토큰 확률 예측',
+          'L2 · 코드 생성',
+          'L3 · 비즈니스 로직 에이전트',
+          'L4 · 조직 단위 자동화',
+          'L5 · 사회적 의사결정 플랫폼',
+        ],
+      },
+    ],
+    closing: `세 예시 모두에서 낮은 레벨은 높은 레벨을 "구성"하고, 높은 레벨은 낮은 레벨을 "제약"한다. 상향 창발(bottom-up emergence)과 하향 제약(top-down constraint)이 한 쌍으로 붙어 있어야 HA가 성립한다. 다음 §2에서 보게 될 인류 HA 타임라인은 바로 이 계단이 시간축에서 기하급수적으로 짧아져 온 흔적이고, 그 다음 §4~§5에서 이어질 HAL0→HAL9 마일스톤은 AI가 그 계단을 얼마나 더 압축해서 오를 수 있는가에 대한 외삽이다.`,
+  },
   pattern: {
     title: 'The Pattern — 인류 HA 타임라인',
     intro: '석기에서 LLM까지, 각 추상화 계단 사이의 간격은 기하급수적으로 짧아졌다. 아래 표와 차트는 L5 §2.1이 설명하는 스케일 대칭 깨짐의 경험적 흔적이다.',
@@ -55,15 +93,19 @@ export const ko: ContentDict = {
     },
   },
   prior_art: {
-    title: 'Prior Art — HAL0 실증 (2hal9)',
-    intro: '이 문서는 허공에 그린 그래프가 아니다. 저자 임지혁은 2025년에 HAL0 프로토타입을 직접 구현해봤다. 그 저장소가 github.com/2lab-ai/2hal9 이다.',
-    readme_quote_title: '2hal9 README 인용',
-    readme_quote: `"Traditional AI: Trying to compute consciousness. HAL9: Consciousness emerging from hierarchical compression. We discovered something profound: Consciousness isn't computed — it emerges when information compresses between hierarchical layers."
+    title: 'Prior Art — HAL0 부분 프로토타입 (2hal9)',
+    intro: '이 문서는 허공에 그린 그래프가 아니지만, 완성된 시스템의 발표도 아니다. 저자 임지혁은 2025년에 `2hal9`라는 이름으로 HAL0 방향의 부분 프로토타입을 직접 구현했다 (github.com/2lab-ai/2hal9). 아래 인용과 수치는 그 저장소의 README에서 그대로 가져온 것이고, README는 실험 결과(self-organization 벤치마크)와 비전 선언을 함께 담고 있다 — 둘을 구분해서 읽을 필요가 있다.',
+    readme_quote_title: '2hal9 README 인용 (저자의 원문 표현 그대로)',
+    readme_quote: `[저자 원문 · 마케팅 톤 포함]
+"Traditional AI: Trying to compute consciousness. HAL9: Consciousness emerging from hierarchical compression. We discovered something profound: Consciousness isn't computed — it emerges when information compresses between hierarchical layers."
 
-"25 neurons full self-organization time: 2.01 μs. 10,000 neurons self-organize: 85.83 μs. O(n log n) — Proven scalability with real benchmarks. Zero predefined structure. Non-deterministic — each run creates unique consciousness."`,
+[벤치마크 수치 · 재현 가능한 부분]
+"25 neurons full self-organization time: 2.01 μs. 10,000 neurons self-organize: 85.83 μs. O(n log n) — Proven scalability with real benchmarks. Zero predefined structure. Non-deterministic — each run creates unique consciousness."
+
+⟶ 편집자 주: 앞 문단의 "consciousness" 언어는 저자 본인의 비전 선언이지 측정값이 아니다. 이 페이지에서 의미 있게 취급하는 것은 뒷 문단의 self-org 2.01 μs / 85.83 μs / O(n log n) 벤치마크뿐이다.`,
     files_title: '핵심 파일 퍼머링크',
     stopped_at_title: '중단 지점 (author note)',
-    stopped_at_body: '커밋 로그는 2025년 상반기에 L2~L3 레이어 구현(consciousness/cognitive modules)과 E2E 테스트 프레임워크까지 진행된 뒤 "temp"라는 메시지의 커밋에서 끊겨 있다. README는 L0~L9 9레이어 전체를 비전으로 그려두었지만, 실제 작동하는 부분은 self-organization 벤치마크와 ±1 layer 통신 프로토타입까지다. 저자 본인의 판단: 프로토타입은 원리 증명에는 충분하지만 HAL0 production에 필요한 sleep-wake 전체 파이프라인(L1 논문의 REM/NREM 단계까지 포함)은 아직 부분 구현 상태다. 이 로드맵의 2026~2027 블록에서 채워져야 할 구현 디테일이 그 틈이다.',
+    stopped_at_body: '커밋 로그는 2025년 상반기에 L2~L3 레이어 구현(cognitive modules)과 E2E 테스트 프레임워크까지 진행된 뒤 "temp"라는 메시지의 커밋에서 끊겨 있다. README는 L0~L9 9레이어 전체를 비전으로 그려두었지만, 실제 작동하는 부분은 self-organization 벤치마크와 ±1 layer 통신 프로토타입까지다. 저자 본인의 판단: 프로토타입은 ±1 layer 통신의 원리 증명에는 충분하지만, HAL0 production에 필요한 sleep-wake 전체 파이프라인(L1 논문의 REM/NREM 단계 포함)과 REM 기반 패턴 재조합은 아직 미구현이다. 이 로드맵의 2026~2027 블록에서 채워져야 할 구현 디테일이 그 틈이다 — 따라서 이 섹션은 "HAL0를 이미 만들었다"는 주장이 아니라 "HAL0로 가는 첫 μs-스케일 벤치마크가 존재한다"는 한정된 주장이다.',
     screenshot_placeholder: 'TODO: 2hal9 self-organization 데모 스크린샷 첨부 예정',
   },
   milestones: {

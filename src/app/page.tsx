@@ -3,6 +3,7 @@
 import { useLang } from '@/context/LangContext';
 import { Hero } from '@/components/Hero';
 import { Intro } from '@/components/Intro';
+import { HAPrimer } from '@/components/HAPrimer';
 import { Pattern } from '@/components/Pattern';
 import { PriorArt } from '@/components/PriorArt';
 import { ClusterMilestones } from '@/components/ClusterMilestones';
@@ -21,6 +22,7 @@ export default function Home() {
     <main>
       <Hero />
       <Intro />
+      <HAPrimer />
       <Pattern />
       <PriorArt />
       <ClusterMilestones />
