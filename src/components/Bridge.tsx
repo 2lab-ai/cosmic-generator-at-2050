@@ -12,8 +12,9 @@ export function Bridge({ id }: Props) {
   if (!bridge) return null;
 
   return (
-    <section
+    <aside
       id={`bridge-${bridge.id}`}
+      role="region"
       aria-labelledby={`bridge-${bridge.id}-title`}
       className="wide-col"
     >
@@ -41,6 +42,6 @@ export function Bridge({ id }: Props) {
           </div>
         )}
       </div>
-    </section>
+    </aside>
   );
 }

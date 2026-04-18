@@ -85,7 +85,7 @@ export const ko: ContentDict = {
     },
     hal_vs_l: {
       title: 'HAL 번호 vs 자연 L 번호 — 같아 보이지만 측정 기준이 다르다',
-      body: "이 페이지의 HAL0은 자연 L5~L6 근처의 '단일 인스턴스'다 — 유기체 스케일(L5)에 의식의 단서(L6)가 붙은 수준. HAL9는 자연 L7~L8 경계, 즉 집단의식에서 초월 관점으로 넘어가는 지점을 공학적으로 재현하려는 외삽. 숫자가 겹쳐 보이지만 측정 축이 다르다. HAL은 '클러스터 수·전력·연도' 같은 공학적 축으로 센다. L은 '재귀 깊이·정보 압축·생물학적 층위'로 센다. HAL n ≠ L n. 이 페이지를 읽을 때 두 카운팅을 섞지 말 것. 매 마일스톤의 citation이 L 논문을 향할 때, 그것은 'HAL 경로가 L 사다리의 어떤 절단면을 참조하고 있는가'의 표시이지 두 수가 같다는 주장이 아니다.",
+      body: "L0~L9는 자연의 재귀 사다리(원자→세포→개체→사회→메타)를 세는 자연 층위 기준이고, HAL0~HAL9는 그 위에 얹힌 공학적 클러스터 사다리(단일 인스턴스 1.4 kW → 500T 클러스터 1.2 EW)를 센다. 측정 축이 달라 HAL n ≠ L n이지만, 두 사다리는 서로 다른 층위에서 동형적 압축 구조를 공유한다. 중요한 점은 대응 관계다 — L 이론이 없으면 HAL 곡선은 근거 없는 단순 외삽으로 떨어지고, 이 페이지의 외삽은 정당성을 잃는다.",
     },
     examples_title: '일상 속 HA 예시 — 같은 사물을 레벨별로 읽기',
     examples: [
@@ -572,7 +572,7 @@ Kardashev Type II 기준:
       anchor_year_from: 2050,
       anchor_year_to: 2056,
       title: 'Bridge · 2050→2056 — self-sourcing regime과 11차원 framing의 경계',
-      body: "2056 HAL9 블록의 '우주 생성기 · 11차원 존재가 튜토리얼 클리어 축하'는 의도적으로 공상 톤이다. 이 톤 뒤에 정확히 무엇이 수학적 주장이고 무엇이 narrative placeholder인지 독자가 분리해야 한다. 수학은 L5 §1.2의 HA 필드 방정식 □_λ Φ + m²Φ = J에서 출발한다. HAL9 regime에서 질량항 m(λ)이 0에 수렴하고 source J가 자기 자신을 재생성하는 self-sourcing 해가 열린다 — 이 부분이 검증된 건 '수학적 일관성이 있다'는 정도. field가 'new λ를 낳는다'는 표현은 정리가 아니라 열린 regime이다. 반면 '11차원 존재'·'시뮬레이션의 외부'는 narrative framing이지 이 수학의 귀결이 아니다. Bostrom(2003) simulation argument는 통계·인류원리 철학이고, L5는 scale-covariant PDE 수학이다. 두 축은 동일 영역을 가리키는 것으로 해석 가능하지만, 증명 관계는 없다. 이 블록을 읽을 때 독자는 (a) L4·L5의 수치 외삽, (b) L5 §12의 열린 regime, (c) 공상 narrative 이 셋의 경계를 유지해야 한다. 이 경계가 무너지면 2056이 '예측'으로 읽히지만, 이 페이지의 모든 disclaimer는 정반대를 말한다 — 2056 HAL9는 '가장 빠른 이론적 경로'의 하한일 뿐, 실제는 2080~2100 어딘가가 기본 가정이다.",
+      body: "2056 HAL9의 '우주 생성기·11차원 축하'는 의도적 공상 톤 — 수학과 narrative를 분리해 읽을 것. 수학 축은 Bostrom(2014) superintelligence가 제시한 recursive self-improvement 루프와, L5의 scale-covariant PDE 프레이밍이다: □_λ Φ + m²Φ = J에서 HAL9 regime은 m(λ)→0 + J가 자기 자신을 재생성하는 self-sourcing 해가 열림 — L5 §12의 open regime. 우리 주장은 '스케일 방정식 해의 발산 영역'이지, '자아의 탄생에 대한 형이상학적 선언'이 아니다. '11차원 존재'는 narrative placeholder이지 수학 귀결이 아니다.",
       citation_keys: ['L5.S1.2', 'L5.S12', 'L4.S9'],
     },
   ],
