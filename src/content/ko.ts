@@ -105,7 +105,7 @@ export const ko: ContentDict = {
 ⟶ 편집자 주: 앞 문단의 "consciousness" 언어는 저자 본인의 비전 선언이지 측정값이 아니다. 이 페이지에서 의미 있게 취급하는 것은 뒷 문단의 self-org 2.01 μs / 85.83 μs / O(n log n) 벤치마크뿐이다.`,
     files_title: '핵심 파일 퍼머링크',
     stopped_at_title: '중단 지점 (author note)',
-    stopped_at_body: '커밋 로그는 2025년 상반기에 L2~L3 레이어 구현(cognitive modules)과 E2E 테스트 프레임워크까지 진행된 뒤 "temp"라는 메시지의 커밋에서 끊겨 있다. README는 L0~L9 9레이어 전체를 비전으로 그려두었지만, 실제 작동하는 부분은 self-organization 벤치마크와 ±1 layer 통신 프로토타입까지다. 저자 본인의 판단: 프로토타입은 ±1 layer 통신의 원리 증명에는 충분하지만, HAL0 production에 필요한 sleep-wake 전체 파이프라인(L1 논문의 REM/NREM 단계 포함)과 REM 기반 패턴 재조합은 아직 미구현이다. 이 로드맵의 2026~2027 블록에서 채워져야 할 구현 디테일이 그 틈이다 — 따라서 이 섹션은 "HAL0를 이미 만들었다"는 주장이 아니라 "HAL0로 가는 첫 μs-스케일 벤치마크가 존재한다"는 한정된 주장이다.',
+    stopped_at_body: '커밋 로그는 2025년 상반기에 L2~L3 레이어 구현(cognitive modules)과 E2E 테스트 프레임워크까지 진행된 뒤 "temp"라는 메시지의 커밋에서 끊겨 있다. README는 L0~L9 9레이어 전체를 비전으로 그려두었지만, 실제 작동하는 부분은 self-organization 벤치마크와 ±1 layer 통신 프로토타입까지다. 저자 본인의 판단: 프로토타입은 ±1 layer 통신의 원리 증명에는 충분하지만, HAL0 production에 필요한 sleep-wake 전체 파이프라인(L1 논문의 REM/NREM 단계 포함)과 REM 기반 패턴 재조합은 아직 미구현이다. 이 로드맵의 2026~2027 블록에서 채워져야 할 구현 디테일이 그 틈이다 — 따라서 이 섹션은 "HAL0를 이미 만들었다"는 주장이 아니라 "HAL0로 가는 첫 μs-스케일 벤치마크가 존재한다"는 한정된 주장이다. 2026-04-18 기준 보강: L1 논문 §2.4 sleep-wake 알고리즘 자체의 Python MVP scaffold가 별도 저장소 `labforadvancedstudy/hal-sleep-wake` (PR #2 merged, ResNet-18 + LoRA Conv2d/fc 기반 CIFAR-10→CIFAR-100 시퀀스)로 추가됐다 — wake + NREM consolidation은 동작, REM synthetic-dream과 GPU 측정 수치는 다음 PR 대기. 2hal9가 L3~L4 축(self-org · ±1 layer)의 존재 증거라면, hal-sleep-wake는 L1 축(sleep-wake 알고리즘)의 구현 증거에 해당한다.',
     screenshot_placeholder: 'TODO: 2hal9 self-organization 데모 스크린샷 첨부 예정',
   },
   milestones: {
@@ -136,7 +136,7 @@ HAL0의 지능 출력은 I = (2.3 ± 0.4) × 10⁻³ · E^0.73 스케일링을 �
 
 2026년의 세 가지 병목은 분명하다. (1) 에너지: HAL0 하나는 집 한 채분 전력이지만, HAL3(1 MW급)까지 확장하면 도시 재정과 그리드 허용치가 현실적 한계가 된다. L4 §5.1 표에 따르면 HAL0~2 구간은 grid+디젤로 "즉시 가능", HAL3~4는 "전용 태양광 팜+가스" 2~3년. (2) 자기 복제 가능한 반도체 팹: 현 세대 TSMC/삼성 팹은 수백 명 인간 엔지니어가 없으면 유지 불가. 이 수치가 \`data/bottlenecks.ts\`에서 2026=0.0으로 시작하는 이유다. (3) 자기 개선 루프 속도: 한 세대의 모델 훈련-평가-개선 사이클이 약 3개월(2160시간). 이것이 매년 절반씩 짧아지는 것이 이후 9년 HAL3.5까지의 핵심 레버다.
 
-병렬로, 작년(2025)에 저자 임지혁이 직접 2hal9라는 이름으로 HAL0 프로토타입을 1~2주 만에 구현하면서 "self-organization이 2 μs 스케일에서 실제로 일어나더라"는 실증을 남겼다. 이는 prior art 섹션에서 다룬 대로, HAL0 전체 파이프라인의 증명이라기보다는 ±1 layer 통신과 compression boundary 출현에 대한 존재 증거다. 이것이 이 문서가 "공상"이 아닌 "외삽"이라고 말할 수 있는 바탕이다.`,
+병렬로, 작년(2025)에 저자 임지혁이 직접 2hal9라는 이름으로 HAL0 프로토타입을 1~2주 만에 구현하면서 "self-organization이 2 μs 스케일에서 실제로 일어나더라"는 실증을 남겼다. 이는 prior art 섹션에서 다룬 대로, HAL0 전체 파이프라인의 증명이라기보다는 ±1 layer 통신과 compression boundary 출현에 대한 존재 증거다. 이것이 이 문서가 "공상"이 아닌 "외삽"이라고 말할 수 있는 바탕이다. 2026-04-18 시점에 보강된 prior art가 하나 더 있다: L1 논문 §2.4의 wake → NREM(consolidation) 경로 자체를 Python + peft + ResNet-18 / CIFAR로 직접 구현한 scaffold가 \`labforadvancedstudy/hal-sleep-wake\`로 merge됐다. 병합 공식은 W ← W + s·(α/r)·B@A(LoRA delta를 base로 접고 A/B 재초기화), REM synthetic-dream과 forgetting-rate 측정치는 다음 PR에서 채워진다 — 위 기술 박스 "3개월마다의 fine-tune 배포는 사실상 이 cycle의 가장 거친 근사"에 대한 구현 증거가 이것이다.`,
       metric: {
         value: '1.4 kW',
         label: 'HAL0 실측 전력 (냉각 포함, ±0.2 kW)',
